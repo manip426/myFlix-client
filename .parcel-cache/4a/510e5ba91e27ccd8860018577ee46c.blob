@@ -22014,80 +22014,53 @@ var _movieCard = require("../movie-card/movie-card");
 var _movieView = require("../movie-view/movie-view");
 class MainView extends _reactDefault.default.Component {
     constructor(){
-        super(); // refers to OOP, means call the constructor of the parent class, in this case 'React.Component'
-        this.state = {
-            movies: [
-                {
-                    _id: 1,
-                    title: 'Inception',
-                    description: 'Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people\'s dreams and steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone\'s mind. If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb\'s every move.',
-                    imagePath: 'https://resizing.flixster.com/4MrL62heb7yBgBt8zllSeqNZxg4=/206x305/v2/https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg'
-                },
-                {
-                    _id: 2,
-                    title: 'The Shawshank Redemption',
-                    description: 'Andy Dufresne (Tim Robbins) is sentenced to two consecutive life terms in prison for the murders of his wife and her lover and is sentenced to a tough prison. However, only Andy knows he didn\'t commit the crimes. While there, he forms a friendship with Red (Morgan Freeman), experiences brutality of prison life, adapts, helps the warden, etc., all in 19 years.',
-                    imagePath: 'https://resizing.flixster.com/U8DOCAyL0efMS6cA0UmrNi8oyQk=/206x305/v2/https://flxt.tmsimg.com/NowShowing/3725/3725_aa.jpg'
-                },
-                {
-                    _id: 3,
-                    title: 'Gladiator',
-                    description: 'Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor and father, Emperor Marcus Aurelius, the great stoical philosopher. Maximus is then relegated to fighting to the death in the gladiator arenas.',
-                    imagePath: 'https://resizing.flixster.com/z1uxBIn8PvwL-9RdEvzLbHJbc9Y=/206x305/v2/https://flxt.tmsimg.com/assets/p24674_p_v13_bc.jpg'
-                }
-            ],
-            selectedMovie: null
-        };
+    // same code
     }
     setSelectedMovie(newSelectedMovie) {
-        this.setState({
-            selectedMovie: newSelectedMovie
-        });
+    // same code
     }
     render() {
         const { movies , selectedMovie  } = this.state;
         if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
-            class: "main-view",
-            __source: {
-                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 27
-            },
-            __self: this
-        }, "'The list is empty'"));
-        return(// <React.Fragment> or <>
-        /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 31
+                lineNumber: 18
+            },
+            __self: this
+        }, "The list is empty!"));
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "main-view",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
+                lineNumber: 21
             },
             __self: this
         }, selectedMovie ? /*#__PURE__*/ _reactDefault.default.createElement(_movieView.MovieView, {
-            movieData: selectedMovie,
+            movie: selectedMovie,
             onBackClick: (newSelectedMovie)=>{
                 this.setSelectedMovie(newSelectedMovie);
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 33
+                lineNumber: 23
             },
             __self: this
         }) : movies.map((movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCard.MovieCard, {
                 key: movie._id,
-                movieData: movie,
+                movie: movie,
                 onMovieClick: (movie1)=>{
                     this.setSelectedMovie(movie1);
                 },
                 __source: {
                     fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                    lineNumber: 35
+                    lineNumber: 25
                 },
                 __self: this
             })
         )));
     }
 }
-exports.default = MainView;
 
   helpers.postlude(module);
 } finally {
@@ -22144,7 +22117,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 class MovieView extends _reactDefault.default.Component {
     render() {
-        const { movieData , onBackClick  } = this.props;
+        const { movie , onBackClick  } = this.props;
         return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "movie-view",
             __source: {
@@ -22160,7 +22133,7 @@ class MovieView extends _reactDefault.default.Component {
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
-            src: movieData.imagePath,
+            src: movie.ImagePath,
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-view\\movie-view.jsx",
                 lineNumber: 11
@@ -22187,7 +22160,7 @@ class MovieView extends _reactDefault.default.Component {
                 lineNumber: 15
             },
             __self: this
-        }, movieData.title)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        }, movie.Title)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "movie-description",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-view\\movie-view.jsx",
@@ -22208,7 +22181,7 @@ class MovieView extends _reactDefault.default.Component {
                 lineNumber: 19
             },
             __self: this
-        }, movieData.description)), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        }, movie.Description)), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             onClick: ()=>{
                 onBackClick(null);
             },
@@ -22228,4 +22201,4 @@ class MovieView extends _reactDefault.default.Component {
 }
 },{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"1J0Ur","../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1eCCH"}]},["1j6wU","2ERZ8","2dJlw"], "2dJlw", "parcelRequire65a2")
 
-//# sourceMappingURL=index.02c3beeb.js.map
+//# sourceMappingURL=index.HASH_REF_72107e86daf839649f767eed02c3beeb.js.map

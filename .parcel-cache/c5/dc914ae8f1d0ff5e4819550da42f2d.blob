@@ -22144,7 +22144,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 class MovieView extends _reactDefault.default.Component {
     render() {
-        const { movieData , onBackClick  } = this.props;
+        const { movie , onBackClick  } = this.props;
         return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "movie-view",
             __source: {
@@ -22160,7 +22160,7 @@ class MovieView extends _reactDefault.default.Component {
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement("img", {
-            src: movieData.imagePath,
+            src: movie.ImagePath,
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-view\\movie-view.jsx",
                 lineNumber: 11
@@ -22187,7 +22187,7 @@ class MovieView extends _reactDefault.default.Component {
                 lineNumber: 15
             },
             __self: this
-        }, movieData.title)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        }, movie.Title)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
             className: "movie-description",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-view\\movie-view.jsx",
@@ -22208,7 +22208,7 @@ class MovieView extends _reactDefault.default.Component {
                 lineNumber: 19
             },
             __self: this
-        }, movieData.description)), /*#__PURE__*/ _reactDefault.default.createElement("button", {
+        }, movie.Description)), /*#__PURE__*/ _reactDefault.default.createElement("button", {
             onClick: ()=>{
                 onBackClick(null);
             },
@@ -22228,4 +22228,4 @@ class MovieView extends _reactDefault.default.Component {
 }
 },{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"1J0Ur","../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1eCCH"}]},["1j6wU","2ERZ8","2dJlw"], "2dJlw", "parcelRequire65a2")
 
-//# sourceMappingURL=index.02c3beeb.js.map
+//# sourceMappingURL=index.HASH_REF_72107e86daf839649f767eed02c3beeb.js.map
