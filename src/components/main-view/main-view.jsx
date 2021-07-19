@@ -2,11 +2,11 @@ import React from "react";
 import axios from "axios";
 
 import { LoginView } from "../login-view/login-view";
-import { RegistrationView } from "../registration-view/registration-view";
+//import { RegistrationView } from "../registration-view/registration-view";
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 
-class MainView extends React.Component {
+export class MainView extends React.Component {
     constructor() {
         super(); 
         this.state = {
@@ -17,11 +17,9 @@ class MainView extends React.Component {
     }
 
   componentDidMount(){
-    axios
-    .get("https://manpreet-movieapi.herokuapp.com/movies")
-    .then((response) => {
+    axios.get("https://manpreet-movieapi.herokuapp.com/movies").then((res) => {
       this.setState({
-        movies: response.data,
+        movies: res.data,
       });
     })
     .catch((error) => {
@@ -50,8 +48,7 @@ class MainView extends React.Component {
     render() {
         const {movies, selectedMovie, user } = this.state;
 
-        //if (!user)
-        //return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
+        //if (!user)return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
 
         if (movies.length === 0) return <div className="main-view" />;
 
@@ -66,5 +63,5 @@ class MainView extends React.Component {
         </div>
         );
     }
-};
+}
 export default MainView;
