@@ -10,7 +10,11 @@
 85C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\normalize-path\README.md121436361000000000 0
 80C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\globby\gitignore.js121436361000000000 0
 87C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\follow-redirects\README.md121436361000000000 0
+<<<<<<< Updated upstream
 52C:\Users\dhali\OneDrive\Documents\myFlix-client\dist132710547916135961 1
+=======
+52C:\Users\dhali\OneDrive\Documents\myFlix-client\dist132711373411245412 1
+>>>>>>> Stashed changes
 58C:\Users\dhali\OneDrive\Documents\myFlix-client\.gitignore132706121597055754 0
 70C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\js-tokens132706128326955559 1
 83C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\normalize-path\LICENSE121436361000000000 0
@@ -31,7 +35,12 @@
 80C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\micromatch\index.js121436361000000000 0
 89C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\fast-glob\out\utils\array.js121436361000000000 0
 66C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react132706128326955559 1
+<<<<<<< Updated upstream
 62C:\Users\dhali\OneDrive\Documents\myFlix-client\src\index.html132710540846920963 0
+=======
+62C:\Users\dhali\OneDrive\Documents\myFlix-client\src\index.html132711371453668520 0
+112C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@parcel\source-map\parcel_sourcemap_node\src\lib.rs121436361000000000 0
+>>>>>>> Stashed changes
 72C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\glob-parent132706131742799866 1
 112C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@parcel\source-map\parcel_sourcemap_node\src\lib.rs121436361000000000 0
 82C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\loose-envify.cmd132706128327244784 0
@@ -39,7 +48,11 @@
 86C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\binary-extensions\license121436361000000000 0
 97C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\axios\lib\core\InterceptorManager.js121436361000000000 0
 107C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\scheduler\cjs\scheduler-tracing.development.js121436361000000000 0
+<<<<<<< Updated upstream
 61C:\Users\dhali\OneDrive\Documents\myFlix-client\src\index.jsx132710540832198157 0
+=======
+61C:\Users\dhali\OneDrive\Documents\myFlix-client\src\index.jsx132711371435433998 0
+>>>>>>> Stashed changes
 67C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\braces132706131743029246 1
 89C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\login-view\login-view.scss132710300428846090 0
 93C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@nodelib\fs.scandir\package.json132706131742590415 0
@@ -47,7 +60,11 @@
 71C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\fill-range132706131743079112 1
 86C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\reusify\benchmarks\fib.js130864826020000000 0
 90C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\axios\lib\core\mergeConfig.js121436361000000000 0
+<<<<<<< Updated upstream
 86C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\main-view\main-view.jsx132710543445729047 0
+=======
+86C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\main-view\main-view.jsx132711371416109347 0
+>>>>>>> Stashed changes
 92C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\axios\lib\core\buildFullPath.js121436361000000000 0
 73C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\login-view132710292922312613 1
 70C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\scheduler132706128326982612 1
@@ -63,12 +80,21 @@
 102C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\registration-view\registration-view.jsx132710290033255336 0
 103C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\registration-view\registration-view.scss132710290340142406 0
 114C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-dom\cjs\react-dom-server.node.production.min.js121436361000000000 0
+<<<<<<< Updated upstream
 88C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-view\movie-view.jsx132710540883303946 0
 89C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-view\movie-view.scss132710292197386544 0
 77C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\axios\index.d.ts121436361000000000 0
 69C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\chokidar132706131743040927 1
 88C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-card\movie-card.jsx132710547881751490 0
 89C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-card\movie-card.scss132710291165501858 0
+=======
+88C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-view\movie-view.jsx132711371544333541 0
+89C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-view\movie-view.scss132710553728785133 0
+77C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\axios\index.d.ts121436361000000000 0
+69C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\chokidar132706131743040927 1
+88C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-card\movie-card.jsx132711371472001181 0
+89C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\movie-card\movie-card.scss132710553728775153 0
+>>>>>>> Stashed changes
 73C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\run-parallel132706131743009306 1
 66C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\fastq132706131743069142 1
 65C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin132706131743923420 1
@@ -486,7 +512,11 @@
 91C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\chokidar\lib\nodefs-handler.js121436361000000000 0
 71C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\braces\lib132706131733385339 1
 75C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\braces\LICENSE121436361000000000 0
+<<<<<<< Updated upstream
 63C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.html132710547915126343 0
+=======
+63C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.html132711373410397684 0
+>>>>>>> Stashed changes
 82C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\braces\lib\compile.js121436361000000000 0
 84C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\braces\lib\constants.js121436361000000000 0
 80C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\braces\lib\parse.js121436361000000000 0
@@ -608,7 +638,14 @@
 82C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\loose-envify.ps1132706128327244784 0
 70C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\sass132706131743926851 0
 74C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\sass.cmd132706131743923420 0
+<<<<<<< Updated upstream
 70C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js132710547915555198 0
 74C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js.map132710547915964122 0
 71C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css132710547915136350 0
 75C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css.map132710547915385666 0
+=======
+70C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js132711373410587187 0
+74C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js.map132711373410756786 0
+71C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css132711373410407663 0
+75C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css.map132711373410507393 0
+>>>>>>> Stashed changes
