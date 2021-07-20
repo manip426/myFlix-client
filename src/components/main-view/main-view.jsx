@@ -52,9 +52,15 @@ class MainView extends React.Component {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         //if (!user)
         //return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
 
+=======
+        //if (!user)return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
+        if (!newRegistration)
+        return <RegistrationView onRegister={(newRegistration) => this.onRegister(newRegistration)} />;
+>>>>>>> Stashed changes
 =======
         //if (!user)return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
         if (!newRegistration)
