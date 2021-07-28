@@ -1,5 +1,5 @@
 import React from 'react';
-import {Nav, Navbar} from 'react-bootstrap';
+import {Nav, Navbar, NavbarBrand} from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 import './nav.scss';
@@ -12,7 +12,7 @@ render() {
   return (
     <>
       <Navbar className="font-weight-bold" fixed="top" expand="lg" bg="info" variant="dark">
-        <Navbar.Brand><span className="navsize1">Film Quarry</span></Navbar.Brand>
+        <NavbarBrand><span className="navsize1">Film Quarry</span></NavbarBrand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end" id="responsive-navbar-nav">
           <Nav className="navsize2">

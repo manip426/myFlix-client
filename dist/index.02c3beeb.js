@@ -871,7 +871,6 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _mainView = require("./components/main-view/main-view");
-var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
 var _container = require("react-bootstrap/Container");
 var _containerDefault = parcelHelpers.interopDefault(_container);
 // Import statement to indicate that you need to bundle `./index.scss`
@@ -885,7 +884,7 @@ class MyFlixApplication extends _reactDefault.default.Component {
                 lineNumber: 14
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_mainViewDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_mainView.MainView, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\index.jsx",
                 lineNumber: 15
@@ -22024,14 +22023,10 @@ var _reactRouterDom = require("react-router-dom");
 //import { MovieCard } from '../movie-card/movie-card';
 var _movieView = require("../movie-view/movie-view");
 var _loginView = require("../login-view/login-view");
+var _movieCard = require("../movie-card/movie-card");
 var _registrationView = require("../registration-view/registration-view");
 var _nav = require("../nav/nav");
 var _container = require("react-bootstrap/Container");
-var _containerDefault = parcelHelpers.interopDefault(_container);
-var _row = require("react-bootstrap/Row");
-var _rowDefault = parcelHelpers.interopDefault(_row);
-var _col = require("react-bootstrap/Col");
-var _colDefault = parcelHelpers.interopDefault(_col);
 class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
@@ -22092,16 +22087,17 @@ class MainView extends _reactDefault.default.Component {
     }
     render() {
         const { movies , user  } = this.state;
-        if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_rowDefault.default, {
+        console.log(movies, user);
+        if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Row, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
+                lineNumber: 87
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.Col, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
                 lineNumber: 88
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 89
             },
             __self: this
         }, /*#__PURE__*/ _reactDefault.default.createElement(_loginView.LoginView, {
@@ -22109,7 +22105,7 @@ class MainView extends _reactDefault.default.Component {
             ,
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 90
+                lineNumber: 89
             },
             __self: this
         }))));
@@ -22117,114 +22113,112 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 93
+                lineNumber: 92
             },
             __self: this
         }));
         return(/*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
+                lineNumber: 95
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.Row, {
+            className: "main-view justify-content-md-center",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
                 lineNumber: 96
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_rowDefault.default, {
-            className: "main-view justify-content-md-center",
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.Container, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
                 lineNumber: 97
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_containerDefault.default, {
-            __source: {
-                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 98
-            },
-            __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_nav.Navbar, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_nav.Navigation, {
             bg: "dark",
             variant: "dark",
             fixed: "top",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 99
+                lineNumber: 98
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_nav.Navbar.Brand, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.NavbarBrand, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 100
+                lineNumber: 99
             },
             __self: this
         }, "Welcome to MyFlix!"), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
+                lineNumber: 100
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: `/`,
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
                 lineNumber: 101
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(Link, {
-            to: `/`,
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.Button, {
+            variant: "link",
+            className: "navbar-link text-light",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
                 lineNumber: 102
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(Button, {
-            variant: "link",
-            className: "navbar-link text-light",
+        }, "Movies")), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: `/users/${user}`,
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 103
+                lineNumber: 104
             },
             __self: this
-        }, "Movies")), /*#__PURE__*/ _reactDefault.default.createElement(Link, {
-            to: `/users/${user}`,
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.Button, {
+            variant: "link",
+            className: "navbar-link text-light",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
                 lineNumber: 105
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(Button, {
-            variant: "link",
-            className: "navbar-link text-light",
-            __source: {
-                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 106
-            },
-            __self: this
-        }, "Profile")), /*#__PURE__*/ _reactDefault.default.createElement(Link, {
+        }, "Profile")), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
             to: `/`,
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 108
+                lineNumber: 107
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(Button, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_container.Button, {
             variant: "link",
             className: "navbar-link text-light",
             onClick: ()=>this.onLoggedOut()
             ,
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 109
+                lineNumber: 108
             },
             __self: this
         }, "Logout"))))), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
             exact: true,
             path: "/",
             render: ()=>{
-                if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, null, /*#__PURE__*/ _reactDefault.default.createElement(_loginView.LoginView, {
+                if (!user) return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Col, null, /*#__PURE__*/ _reactDefault.default.createElement(_loginView.LoginView, {
                     onLoggedIn: (user1)=>this.onLoggedIn(user1)
                 })));
                 if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
                     className: "main-view"
                 }));
-                return(/*#__PURE__*/ _reactDefault.default.createElement(MoviesList, {
-                    movies: movies
-                }));
+                return Movies.map(movie) = _movieCard.MovieCard.movie(movie);
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 115
+                lineNumber: 114
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -22233,18 +22227,18 @@ class MainView extends _reactDefault.default.Component {
                 if (user) return(/*#__PURE__*/ _reactDefault.default.createElement(Redirect, {
                     to: "/"
                 }));
-                return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, null, /*#__PURE__*/ _reactDefault.default.createElement(_registrationView.RegistrationView, null)));
+                return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Col, null, /*#__PURE__*/ _reactDefault.default.createElement(_registrationView.RegistrationView, null)));
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 122
+                lineNumber: 121
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
             path: "/users/:userId",
             render: ()=>{
                 if (!user) return;
-                return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, null, /*#__PURE__*/ _reactDefault.default.createElement(ProfileView, {
+                return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Col, null, /*#__PURE__*/ _reactDefault.default.createElement(ProfileView, {
                     onLoggedIn: (user1)=>this.onLoggedIn(user1)
                     ,
                     movies: movies,
@@ -22254,7 +22248,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 129
+                lineNumber: 128
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -22264,7 +22258,7 @@ class MainView extends _reactDefault.default.Component {
                 if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
                     className: "main-view"
                 }));
-                return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, {
+                return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Col, {
                     md: 8
                 }, /*#__PURE__*/ _reactDefault.default.createElement(_movieView.MovieView, {
                     movie: movies.find((m)=>m._id === match.params.movieId
@@ -22274,7 +22268,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 138
+                lineNumber: 137
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -22284,7 +22278,7 @@ class MainView extends _reactDefault.default.Component {
                 if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
                     className: "main-view"
                 }));
-                return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, {
+                return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Col, {
                     md: 8
                 }, /*#__PURE__*/ _reactDefault.default.createElement(GenreView, {
                     genre: movies.find((m)=>m.Genre.Name === match.params.name
@@ -22294,7 +22288,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 146
+                lineNumber: 145
             },
             __self: this
         }), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -22304,7 +22298,7 @@ class MainView extends _reactDefault.default.Component {
                 if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
                     className: "main-view"
                 }));
-                return(/*#__PURE__*/ _reactDefault.default.createElement(_colDefault.default, {
+                return(/*#__PURE__*/ _reactDefault.default.createElement(_container.Col, {
                     md: 8
                 }, /*#__PURE__*/ _reactDefault.default.createElement(DirectorView, {
                     director: movies.find((m)=>m.Director.Name === match.params.name
@@ -22314,7 +22308,7 @@ class MainView extends _reactDefault.default.Component {
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
-                lineNumber: 154
+                lineNumber: 153
             },
             __self: this
         }))));
@@ -22327,7 +22321,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"1J0Ur","../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1eCCH","../movie-view/movie-view":"4uI3E","axios":"7rA65","../login-view/login-view":"4BLcX","../registration-view/registration-view":"3VjP3","react-router-dom":"1PMSK","react-bootstrap/Row":"3fzwD","react-bootstrap/Col":"2D0r8","react-bootstrap/Container":"3Mt3t","../nav/nav":"1Pd48"}],"4uI3E":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/src/esmodule-helpers.js":"1J0Ur","../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1eCCH","../movie-view/movie-view":"4uI3E","axios":"7rA65","../login-view/login-view":"4BLcX","../registration-view/registration-view":"3VjP3","react-router-dom":"1PMSK","react-bootstrap/Container":"3Mt3t","../nav/nav":"1Pd48","../movie-card/movie-card":"1knvC"}],"4uI3E":[function(require,module,exports) {
 var helpers = require("../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28493,63 +28487,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 }
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"68QIU"}],"3fzwD":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.default = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _react = _interopRequireDefault(require("react"));
-var _ThemeProvider = require("./ThemeProvider");
-var _excluded = [
-    "bsPrefix",
-    "className",
-    "noGutters",
-    "as"
-];
-var DEVICE_SIZES = [
-    'xl',
-    'lg',
-    'md',
-    'sm',
-    'xs'
-];
-var defaultProps = {
-    noGutters: false
-};
-var Row = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
-    var bsPrefix = _ref.bsPrefix, className = _ref.className, noGutters = _ref.noGutters, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
-    var decoratedBsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'row');
-    var sizePrefix = decoratedBsPrefix + "-cols";
-    var classes = [];
-    DEVICE_SIZES.forEach(function(brkPoint) {
-        var propValue = props[brkPoint];
-        delete props[brkPoint];
-        var cols;
-        if (propValue != null && typeof propValue === 'object') cols = propValue.cols;
-        else cols = propValue;
-        var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
-        if (cols != null) classes.push("" + sizePrefix + infix + "-" + cols);
-    });
-    return(/*#__PURE__*/ _react.default.createElement(Component, _extends2.default({
-        ref: ref
-    }, props, {
-        className: _classnames.default.apply(void 0, [
-            className,
-            decoratedBsPrefix,
-            noGutters && 'no-gutters'
-        ].concat(classes))
-    })));
-});
-Row.displayName = 'Row';
-Row.defaultProps = defaultProps;
-var _default = Row;
-exports.default = _default;
-module.exports = exports["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"1Pd48":[function(require,module,exports) {
+},{"react-is":"68QIU"}],"1Pd48":[function(require,module,exports) {
 var helpers = require("../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28580,7 +28518,7 @@ class Navigation extends _reactDefault.default.Component {
                 lineNumber: 14
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Navbar.Brand, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.NavbarBrand, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
                 lineNumber: 15
@@ -38472,6 +38410,62 @@ var _default = ResponsiveEmbed;
 exports.default = _default;
 module.exports = exports["default"];
 
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"3fzwD":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.default = void 0;
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+var _classnames = _interopRequireDefault(require("classnames"));
+var _react = _interopRequireDefault(require("react"));
+var _ThemeProvider = require("./ThemeProvider");
+var _excluded = [
+    "bsPrefix",
+    "className",
+    "noGutters",
+    "as"
+];
+var DEVICE_SIZES = [
+    'xl',
+    'lg',
+    'md',
+    'sm',
+    'xs'
+];
+var defaultProps = {
+    noGutters: false
+};
+var Row = /*#__PURE__*/ _react.default.forwardRef(function(_ref, ref) {
+    var bsPrefix = _ref.bsPrefix, className = _ref.className, noGutters = _ref.noGutters, _ref$as = _ref.as, Component = _ref$as === void 0 ? 'div' : _ref$as, props = _objectWithoutPropertiesLoose2.default(_ref, _excluded);
+    var decoratedBsPrefix = _ThemeProvider.useBootstrapPrefix(bsPrefix, 'row');
+    var sizePrefix = decoratedBsPrefix + "-cols";
+    var classes = [];
+    DEVICE_SIZES.forEach(function(brkPoint) {
+        var propValue = props[brkPoint];
+        delete props[brkPoint];
+        var cols;
+        if (propValue != null && typeof propValue === 'object') cols = propValue.cols;
+        else cols = propValue;
+        var infix = brkPoint !== 'xs' ? "-" + brkPoint : '';
+        if (cols != null) classes.push("" + sizePrefix + infix + "-" + cols);
+    });
+    return(/*#__PURE__*/ _react.default.createElement(Component, _extends2.default({
+        ref: ref
+    }, props, {
+        className: _classnames.default.apply(void 0, [
+            className,
+            decoratedBsPrefix,
+            noGutters && 'no-gutters'
+        ].concat(classes))
+    })));
+});
+Row.displayName = 'Row';
+Row.defaultProps = defaultProps;
+var _default = Row;
+exports.default = _default;
+module.exports = exports["default"];
+
 },{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","./ThemeProvider":"4rz1S"}],"4fhZt":[function(require,module,exports) {
 "use strict";
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
@@ -39404,6 +39398,97 @@ var _default = Tooltip;
 exports.default = _default;
 module.exports = exports["default"];
 
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","prop-types-extra/lib/isRequiredForA11y":"4XrEc","./ThemeProvider":"4rz1S"}],"21HaQ":[function() {},{}]},["1j6wU","2ERZ8","2dJlw"], "2dJlw", "parcelRequire65a2")
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/extends":"3krLJ","@babel/runtime/helpers/objectWithoutPropertiesLoose":"3Yx9V","classnames":"5aJRc","react":"3b2NM","prop-types-extra/lib/isRequiredForA11y":"4XrEc","./ThemeProvider":"4rz1S"}],"21HaQ":[function() {},{}],"1knvC":[function(require,module,exports) {
+var helpers = require("../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
+); //MovieCard.propTypes = {
+ //movie: PropTypes.shape({
+ //  Title: PropTypes.string.isRequired,
+ //  Description: PropTypes.string.isRequired,
+ //  Genre: PropTypes.shape({
+ //    Name: PropTypes.string.isRequired,
+ //    Description: PropTypes.string.isRequired
+ //  }),
+ //  Director: PropTypes.shape({
+ //   Name: PropTypes.string.isRequired,
+ //   Bio: PropTypes.string.isRequired,
+ //  Birth: PropTypes.string.isRequired
+ // }),
+ // ImagePath: PropTypes.string.isRequired,
+ // Featured: PropTypes.bool.isRequired,
+ //  Year: PropTypes.string.isRequired
+ // }).isRequired
+ //};
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactBootstrap = require("react-bootstrap");
+var _reactBootstrapDefault = parcelHelpers.interopDefault(_reactBootstrap);
+var _reactRouterDom = require("react-router-dom");
+class MovieCard extends _reactDefault.default.Component {
+    render() {
+        const { movie  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 12
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Img, {
+            variant: "top",
+            src: movie.ImagePath,
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 13
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Body, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Title, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 15
+            },
+            __self: this
+        }, movie.Title), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Text, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 16
+            },
+            __self: this
+        }, movie.Description), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: `/movies/${movie._id}`,
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default, {
+            variant: "link",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, "Open")))));
+    }
+}
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"3b2NM","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","@parcel/transformer-js/src/esmodule-helpers.js":"1J0Ur","../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1eCCH"}]},["1j6wU","2ERZ8","2dJlw"], "2dJlw", "parcelRequire65a2")
 
 //# sourceMappingURL=index.02c3beeb.js.map

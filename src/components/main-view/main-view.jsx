@@ -1,17 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
+import { MovieCard } from '../movie-card/movie-card';
 import { RegistrationView } from '../registration-view/registration-view';
-import { Navbar } from '../nav/nav';
-import Container from 'react-bootstrap/Container';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Navigation } from '../nav/nav';
+import {Row, Col, NavbarBrand, Container, Button} from 'react-bootstrap/Container';
 
 export class MainView extends React.Component {
     constructor() {
@@ -84,6 +82,7 @@ export class MainView extends React.Component {
 
   render() {
     const { movies, user } = this.state;
+    console.log (movies,user)
 
     if (!user) return <Row>
     <Col>
@@ -96,8 +95,8 @@ export class MainView extends React.Component {
       <Router>
         <Row className="main-view justify-content-md-center">
           <Container>
-            <Navbar bg="dark" variant="dark" fixed="top">
-              <Navbar.Brand>Welcome to MyFlix!</Navbar.Brand>
+            <Navigation bg="dark" variant="dark" fixed="top">
+              <NavbarBrand>Welcome to MyFlix!</NavbarBrand>
               <ul>
                 <Link to={`/`}>
                   <Button variant="link" className="navbar-link text-light">Movies</Button>
@@ -109,7 +108,7 @@ export class MainView extends React.Component {
                   <Button variant="link" className="navbar-link text-light" onClick={() => this.onLoggedOut()}>Logout</Button>
                 </Link >
               </ul>
-            </Navbar >
+            </Navigation >
           </Container>
 
           <Route exact path="/" render={() => {
@@ -117,7 +116,7 @@ export class MainView extends React.Component {
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
-            return <MoviesList movies={movies} />;
+            return  Movies.map (movie) = MovieCard.movie(movie) ;
           }} />
           <Route path="/register" render={() => {
             if (user) return <Redirect to="/" />
