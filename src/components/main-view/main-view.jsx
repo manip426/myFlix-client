@@ -9,7 +9,7 @@ import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { RegistrationView } from '../registration-view/registration-view';
 import { Navigation } from '../nav/nav';
-import {Row, Col, NavbarBrand, Container, Button} from 'react-bootstrap/Container';
+import {Row, Col, NavbarBrand, Container, Button} from 'react-bootstrap';
 
 export class MainView extends React.Component {
     constructor() {
@@ -71,7 +71,7 @@ export class MainView extends React.Component {
     });
   }
 
-  onLoggedOut() {
+  onSignOut() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     this.setState({

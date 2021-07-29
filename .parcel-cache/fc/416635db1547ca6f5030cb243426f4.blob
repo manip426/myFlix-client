@@ -22078,7 +22078,7 @@ class MainView extends _reactDefault.default.Component {
             console.log(error);
         });
     }
-    onSignOut() {
+    onLoggedOut() {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
         this.setState({
@@ -39491,4 +39491,4 @@ class MovieCard extends _reactDefault.default.Component {
 }
 },{"react":"3b2NM","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","@parcel/transformer-js/src/esmodule-helpers.js":"1J0Ur","../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1eCCH"}]},["1j6wU","2ERZ8","2dJlw"], "2dJlw", "parcelRequire65a2")
 
-//# sourceMappingURL=index.02c3beeb.js.map
+//# sourceMappingURL=index.HASH_REF_72107e86daf839649f767eed02c3beeb.js.map
