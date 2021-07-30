@@ -12,7 +12,7 @@
 60C:\Users\dhali\OneDrive\Documents\myFlix-client\package.json132718208230264158 0
 102C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\scheduler\umd\scheduler.production.min.js121436361000000000 0
 85C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\normalize-path\README.md121436361000000000 0
-52C:\Users\dhali\OneDrive\Documents\myFlix-client\dist132720809346794299 1
+52C:\Users\dhali\OneDrive\Documents\myFlix-client\dist132720818221302242 1
 98C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@babel\runtime\helpers\createClass.js121012626000000000 0
 97C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-bootstrap\cjs\CardContext.d.ts121436361000000000 0
 58C:\Users\dhali\OneDrive\Documents\myFlix-client\.gitignore132706121597055754 0
@@ -98,7 +98,7 @@
 110C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-bootstrap\esm\usePopperMarginModifiers.d.ts121436361000000000 0
 92C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-bootstrap\esm\CardDeck.js121436361000000000 0
 101C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-bootstrap\esm\AccordionHeader.d.ts121436361000000000 0
-86C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\main-view\main-view.jsx132720809190165893 0
+86C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\main-view\main-view.jsx132720814522620967 0
 94C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\dom-helpers\addClass\package.json121436361000000000 0
 103C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-bootstrap\esm\ToggleButtonGroup.d.ts121436361000000000 0
 118C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-transition-group\dist\react-transition-group.min.js121436361000000000 0
@@ -163,7 +163,7 @@
 88C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\dom-helpers\cjs\camelize.js121436361000000000 0
 96C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@restart\hooks\cjs\useMediaQuery.js121436361000000000 0
 94C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@restart\hooks\esm\useInterval.js121436361000000000 0
-74C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\nav\nav.jsx132719786734650404 0
+74C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\nav\nav.jsx132720818165919136 0
 75C:\Users\dhali\OneDrive\Documents\myFlix-client\src\components\nav\nav.scss132718230496226447 0
 93C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\react-bootstrap\cjs\Tooltip.d.ts121436361000000000 0
 109C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\@babel\runtime\helpers\esm\slicedToArrayLoose.js121012626000000000 0
@@ -3012,8 +3012,8 @@
 81C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\detect-libc.ps1132706131743737353 0
 70C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\sass132706131743926851 0
 74C:\Users\dhali\OneDrive\Documents\myFlix-client\node_modules\.bin\sass.cmd132706131743923420 0
-70C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js132720809346295663 0
-74C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js.map132720809346785123 0
-71C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css132720809341069953 0
-75C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css.map132720809341139445 0
-63C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.html132720809341059640 0
+70C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js132720818220853452 0
+74C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.02c3beeb.js.map132720818221282309 0
+71C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css132720818220474474 0
+75C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.51ea1789.css.map132720818220584506 0
+63C:\Users\dhali\OneDrive\Documents\myFlix-client\dist\index.html132720818220474474 0
