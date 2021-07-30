@@ -22214,7 +22214,10 @@ class MainView extends _reactDefault.default.Component {
                 if (movies.length === 0) return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
                     className: "main-view"
                 }));
-                return Movies.map(movie) = _movieCard.MovieCard.movie(movie);
+                return movies.map[(movie)=>/*#__PURE__*/ _reactDefault.default.createElement(_movieCard.MovieCard, {
+                        movie: movie
+                    })
+                ];
             },
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\main-view\\main-view.jsx",
@@ -39429,18 +39432,17 @@ parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
-var _reactBootstrapDefault = parcelHelpers.interopDefault(_reactBootstrap);
 var _reactRouterDom = require("react-router-dom");
 class MovieCard extends _reactDefault.default.Component {
     render() {
         const { movie  } = this.props;
-        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default, {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 12
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Img, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Img, {
             variant: "top",
             src: movie.ImagePath,
             __source: {
@@ -39448,19 +39450,19 @@ class MovieCard extends _reactDefault.default.Component {
                 lineNumber: 13
             },
             __self: this
-        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Body, {
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Body, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 14
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Title, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Title, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 15
             },
             __self: this
-        }, movie.Title), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default.Text, {
+        }, movie.Title), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Text, {
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
                 lineNumber: 16
@@ -39473,7 +39475,7 @@ class MovieCard extends _reactDefault.default.Component {
                 lineNumber: 17
             },
             __self: this
-        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrapDefault.default, {
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Button, {
             variant: "link",
             __source: {
                 fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",

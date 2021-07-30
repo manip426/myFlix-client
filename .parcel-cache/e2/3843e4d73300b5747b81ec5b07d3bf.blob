@@ -1,0 +1,89 @@
+var helpers = require("../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MovieCard", ()=>MovieCard
+); //MovieCard.propTypes = {
+ //movie: PropTypes.shape({
+ //  Title: PropTypes.string.isRequired,
+ //  Description: PropTypes.string.isRequired,
+ //  Genre: PropTypes.shape({
+ //    Name: PropTypes.string.isRequired,
+ //    Description: PropTypes.string.isRequired
+ //  }),
+ //  Director: PropTypes.shape({
+ //   Name: PropTypes.string.isRequired,
+ //   Bio: PropTypes.string.isRequired,
+ //  Birth: PropTypes.string.isRequired
+ // }),
+ // ImagePath: PropTypes.string.isRequired,
+ // Featured: PropTypes.bool.isRequired,
+ //  Year: PropTypes.string.isRequired
+ // }).isRequired
+ //};
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactBootstrap = require("react-bootstrap");
+var _reactRouterDom = require("react-router-dom");
+class MovieCard extends _reactDefault.default.Component {
+    render() {
+        const { movie  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 12
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Img, {
+            variant: "top",
+            src: movie.ImagePath,
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 13
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Body, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Title, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 15
+            },
+            __self: this
+        }, movie.Title), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Card.Text, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 16
+            },
+            __self: this
+        }, movie.Description), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: `/movies/${movie._id}`,
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Button, {
+            variant: "link",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\movie-card\\movie-card.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, "Open")))));
+    }
+}
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
