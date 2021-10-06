@@ -1,15 +1,38 @@
-myFlix-Client
-Achievement 3:
-React App (myFlix-Client)
+myFlix-client
+User Stories
 
-Objective:
-Using React to build the client-side for an application called myFlix
+● As a user, I want to be able to access information on movies, directors, and genres so that I can learn more about movies I’ve watched or am interested in.
+● As a user, I want to be able to create a profile so I can save data about my favorite movies.
+Features
+Main view
+● Returns a list of ALL movies to the user (each listed item with an image, title, and description)
+● Sorting and filtering
+● Ability to select a movie for more details
+Single movie view
+● Returns data (description, genre, director, image) about a single movie to the user
+● Allows users to add a movie to their list of favorites
+Login view
+● Allows users to log in with a username and password
+● Registration view
+● Allows new users to register (username, password, email, birthday)
+Genre view
+● Returns data about a genre, with a name and description
+● Displays example movies
+Director view
+● Returns data about a director (name, bio, birth year, death year)
+● Displays example movies
+Profile view
+● Allows users to update their user info (username, password, email, date of birth)
+● Allows existing users to deregister
+● Displays favorite movies
+● Allows users to remove a movie from their list of favorites
+Lets get started!
+1. Clone the repo and Install dependencies
+´npm install´
 
-User Stories:
-As a user, I want to be able to access information on movies, directors, and genres to help me choose what movies to watch.
+2. Make sure you have Parcel installed
+´parcel --version´
 
-Dependencies:
--Parcel -React -React-DOM
-
-Parcel path to index
-:C:\Desktop\Documents\myFlix-client\src/index.html
+If it is not install, follow the instructions https://www.npmjs.com/package/parcel/v/2.0.0-beta.1
+3. Run the app by introduciong
+´src/index.html´
