@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Proptypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Form from 'react-bootstrap/Form';

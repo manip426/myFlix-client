@@ -4,22 +4,16 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
-// #0
 import { setMovies } from '../../actions/actions';
-
-// we haven't written this one yet
 import MoviesList from '../movies-list/movies-list';
-/* 
-  #1 The rest of components import statements but without the MovieCard's 
-  because it will be imported and used in the MoviesList component rather
-  than in here. 
-*/
 import { MovieView } from '../movie-view/movie-view';
 import { LoginView } from '../login-view/login-view';
 //import { MovieCard } from '../movie-card/movie-card';
 import { RegistrationView } from '../registration-view/registration-view';
+import { GenreView } from '../genre-view/genre-view';
+import { DirectorView } from '../director-view/director-view';
 import { Navigation } from '../nav/nav';
+
 import {Row, Col, NavbarBrand, Container, Button} from 'react-bootstrap';
 
  class MainView extends React.Component {
