@@ -1,0 +1,136 @@
+var helpers = require("../../../../../../AppData/Roaming/nvm/v14.17.1/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Navigation", ()=>Navigation
+);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactBootstrap = require("react-bootstrap");
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _navScss = require("./nav.scss");
+class Navigation extends _reactDefault.default.Component {
+    render() {
+        const { onSignOut , history , user  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Navbar, {
+            className: "font-weight-bold",
+            fixed: "top",
+            expand: "lg",
+            bg: "info",
+            variant: "dark",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 14
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.NavbarBrand, {
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 15
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "navsize1",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 15
+            },
+            __self: this
+        }, "Film Quarry")), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Navbar.Toggle, {
+            "aria-controls": "responsive-navbar-nav",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 16
+            },
+            __self: this
+        }), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Navbar.Collapse, {
+            className: "justify-content-end",
+            id: "responsive-navbar-nav",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Nav, {
+            className: "navsize2",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 18
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+            className: "text-white mx-2",
+            onClick: ()=>{
+                history.push(`/movies`);
+            },
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 19
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "hover ani",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 20
+            },
+            __self: this
+        }, "Movies")), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+            className: "text-white mx-2",
+            onClick: ()=>{
+                history.push(`/users/${user}`);
+            },
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "hover ani",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 26
+            },
+            __self: this
+        }, `${user}`)), /*#__PURE__*/ _reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+            className: "text-white mx-2",
+            onClick: ()=>{
+                onSignOut(null);
+                history.push('/');
+            },
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: "hover ani",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        }, "Sign Out"))))), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: "margin",
+            __source: {
+                fileName: "C:\\Users\\dhali\\OneDrive\\Documents\\myFlix-client\\src\\components\\nav\\nav.jsx",
+                lineNumber: 33
+            },
+            __self: this
+        })));
+    }
+}
+Navigation.propTypes = {
+    onSignOut: _propTypesDefault.default.func.isRequired
+};
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

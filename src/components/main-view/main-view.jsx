@@ -1,43 +1,175 @@
-import React from 'react';
-import {MovieCard} from '../movie-card/movie-card';
-import {MovieView} from '../movie-view/movie-view';
 
-export class MainView extends React.Component {
+import React from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { setMovies } from '../../actions/actions';
+import MoviesList from '../movies-list/movies-list';
+import { MovieView } from '../movie-view/movie-view';
+import { LoginView } from '../login-view/login-view';
+//import { MovieCard } from '../movie-card/movie-card';
+import { RegistrationView } from '../registration-view/registration-view';
+import { GenreView } from '../genre-view/genre-view';
+import { DirectorView } from '../director-view/director-view';
+import { Navigation } from '../nav/nav';
+
+import {Row, Col, NavbarBrand, Container, Button} from 'react-bootstrap';
+
+ class MainView extends React.Component {
     constructor() {
-        super(); // refers to OOP, means call the constructor of the parent class, in this case 'React.Component'
+        super(); 
         this.state = {
-            movies: [
-               {_id:1, title: 'Inception', description: 'Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people\'s dreams and steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone\'s mind. If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb\'s every move.', imagePath:'https://resizing.flixster.com/4MrL62heb7yBgBt8zllSeqNZxg4=/206x305/v2/https://flxt.tmsimg.com/assets/p7825626_p_v10_af.jpg'},
-               {_id:2, title: 'The Shawshank Redemption', description: 'Andy Dufresne (Tim Robbins) is sentenced to two consecutive life terms in prison for the murders of his wife and her lover and is sentenced to a tough prison. However, only Andy knows he didn\'t commit the crimes. While there, he forms a friendship with Red (Morgan Freeman), experiences brutality of prison life, adapts, helps the warden, etc., all in 19 years.', imagePath:'https://resizing.flixster.com/U8DOCAyL0efMS6cA0UmrNi8oyQk=/206x305/v2/https://flxt.tmsimg.com/NowShowing/3725/3725_aa.jpg'},
-               {_id:3, title: 'Gladiator', description: 'Commodus (Joaquin Phoenix) takes power and strips rank from Maximus (Russell Crowe), one of the favored generals of his predecessor and father, Emperor Marcus Aurelius, the great stoical philosopher. Maximus is then relegated to fighting to the death in the gladiator arenas.', imagePath:'https://resizing.flixster.com/z1uxBIn8PvwL-9RdEvzLbHJbc9Y=/206x305/v2/https://flxt.tmsimg.com/assets/p24674_p_v13_bc.jpg'} 
-            ],
-            selectedMovie: null
-        }
+                        user: null,
+        };
     }
 
-    setSelectedMovie(newSelectedMovie) {
+    componentDidMount() {
+      let accessToken = localStorage.getItem('token');
+      if (accessToken !== null) {
         this.setState({
-            selectedMovie: newSelectedMovie
+          user: localStorage.getItem('user')
+        });
+        this.getMovies(accessToken);
+      }
+    }
+   /* When a movie is clicked, this function is involed and updates the state of the selectedMovie property to that movie*/
+    setSelectedMovie(movie) {
+        this.setState({
+            selectedMovie: movie,
         });
     }
+   /*When a user logs in, this function updates the user property in state to that particular user */
+   onLoggedIn(authData) {
+    console.log(authData);
+    this.setState({
+      user: authData.user.Username
+    });
+  
+    localStorage.setItem('token', authData.token);
+    localStorage.setItem('user', authData.user.Username);
+    this.getMovies(authData.token);
+  }
 
-    render() {
-        const {movies, selectedMovie } = this.state;
+   onRegister(register) {
+     this.setState({
+       register,
+     });
+   }
 
-        if (movies.length === 0) return <div class="main-view">'The list is empty'</div>;
 
-        return (
-            // <React.Fragment> or <>
-            <div className="main-view">
-                {selectedMovie
-                ? <MovieView movieData={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-                : movies.map(movie => (
-                    <MovieCard key={movie._id} movieData={movie} onMovieClick={(movie) => { this.setSelectedMovie(movie) }}/>
-        ))
-      }
-    </div>
-            // </React.Fragment> or </>
-        );
-    }
+   
+   getMovies(token) {
+    axios.get('https://manpreet-movieapi.herokuapp.com/movies', {
+      headers: { Authorization: `Bearer ${token}`}
+    })
+    .then(response => {
+      // Assign the result to the state
+      this.setState({
+        movies: response.data
+      });
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  onSignOut() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    this.setState({
+      user: null
+    });
+  }
+  
+
+  render() {
+    let { movies } = this.props;
+    let { user } = this.state;
+
+    
+
+    return (
+      <Router>
+        <Row className="main-view justify-content-md-center">
+        <Route exact path="/" render={() => {
+            if (!user) return <Col>
+              <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+            </Col>
+            if (movies.length === 0) return <div className="main-view" />;
+                        return <MoviesList movies={movies}/>;
+          }} />
+          <Container>
+            <Navigation bg="dark" variant="dark" fixed="top">
+              <NavbarBrand>Welcome to MyFlix!</NavbarBrand>
+              <ul>
+                <Link to={`/`}>
+                  <Button variant="link" className="navbar-link text-light">Movies</Button>
+                </Link >
+                <Link to={`/users/${user}`}>
+                  <Button variant="link" className="navbar-link text-light">Profile</Button>
+                </Link>
+                <Link to={`/`}>
+                  <Button variant="link" className="navbar-link text-light" onClick={() => this.onLoggedOut()}>Logout</Button>
+                </Link >
+              </ul>
+            </Navigation >
+          </Container>
+
+          <Route exact path="/" render={() => {
+            if (!user) return <Col>
+              <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+            </Col>
+            if (movies.length === 0) return <div className="main-view" />;
+            return  movies.map[movie => <MovieCard movie = {movie} />];
+          }} />
+          <Route path="/register" render={() => {
+            if (user) return <Redirect to="/" />
+            return <Col>
+              <RegistrationView />
+            </Col>
+          }} />
+
+          <Route path="/users/:userId" render={() => {
+            if (!user) return
+            return <Col>
+              <ProfileView onLoggedIn={user => this.onLoggedIn(user)}
+                movies={movies} user={user}
+                onBackClick={() => history.goBack()} />
+            </Col>
+          }} />
+
+          <Route path="/movies/:movieId" render={({ match, history }) => {
+            if (!user) return
+            if (movies.length === 0) return <div className="main-view" />;
+            return <Col md={8}>
+              <MovieView movie={movies.find(m => m._id === match.params.movieId)} onBackClick={() => history.goBack()} />
+            </Col>
+          }} />
+
+          <Route path="/genres/:name" render={({ match, history }) => {
+            if (!user) return
+            if (movies.length === 0) return <div className="main-view" />;
+            return <Col md={8}>
+              <GenreView genre={movies.find(m => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
+            </Col>
+          }} />
+
+          <Route path="/directors/:name" render={({ match, history }) => {
+            if (!user) return
+            if (movies.length === 0) return <div className="main-view" />;
+            return <Col md={8}>
+              <DirectorView director={movies.find(m => m.Director.Name === match.params.name).Director} onBackClick={() => history.goBack()} />
+            </Col>
+          }} />
+        </Row>
+      </Router>
+    );
+  }
 }
-export default MainView;
+
+let mapStateToProps = state => {
+  return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, { setMovies } )(MainView);
